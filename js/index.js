@@ -34,10 +34,7 @@ window.onload = function(){
     let turn = 1;
 
     function addXO(){
-        if(this.textContent === '' && turn === 9){
-            this.textContent = 'X';
-            endGame()
-        }else if(this.textContent === '' && turn%2 !== 0 ){
+        if(this.textContent === '' && turn%2 !== 0 ){
             this.textContent = 'X';
             turnTracker.textContent = `O's Turn`;
             turn++;
@@ -77,8 +74,10 @@ window.onload = function(){
                 oScoreText.textContent = `O : ${oScore}`;
                 winText.textContent = "O WINS!";
                 popUp.style.display = "flex";
+        }else{
+            winText.textContent = "TIE!";
+            popUp.style.display = "flex";
         }
-        popUp.style.display = "flex";
     }
 
     function win(arr, cell){
@@ -86,7 +85,7 @@ window.onload = function(){
             cell == board.children[1] ||
             cell == board.children[2]){
                 arr[0].row1++;
-                if (arr[0].row1 === 3){
+                if (arr[0].row1 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -94,7 +93,7 @@ window.onload = function(){
             cell == board.children[4] ||
             cell == board.children[5]){
                 arr[0].row2++;
-                if (arr[0].row2 === 3){
+                if (arr[0].row2 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -102,7 +101,7 @@ window.onload = function(){
             cell == board.children[7] ||
             cell == board.children[8]){
                 arr[0].row3++;
-                if (arr[0].row3 === 3){
+                if (arr[0].row3 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -110,7 +109,7 @@ window.onload = function(){
             cell == board.children[3] ||
             cell == board.children[6]){
                 arr[0].col1++;
-                if (arr[0].col1 === 3){
+                if (arr[0].col1 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -118,7 +117,7 @@ window.onload = function(){
             cell == board.children[4] ||
             cell == board.children[7]){
                 arr[0].col2++;
-                if (arr[0].col2 === 3){
+                if (arr[0].col2 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -126,7 +125,7 @@ window.onload = function(){
             cell == board.children[5] ||
             cell == board.children[8]){
                 arr[0].col3++;
-                if (arr[0].col3 === 3){
+                if (arr[0].col3 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -134,7 +133,7 @@ window.onload = function(){
             cell == board.children[4] ||
             cell == board.children[8]){
                 arr[0].dia1++;
-                if (arr[0].dia1 === 3){
+                if (arr[0].dia1 === 3 || turn === 10){
                     endGame();
                 }
             }
@@ -142,7 +141,7 @@ window.onload = function(){
             cell == board.children[4] ||
             cell == board.children[6]){
                 arr[0].dia2++;
-                if (arr[0].dia2 === 3){
+                if (arr[0].dia2 === 3 || turn === 10){
                     endGame();
                 }
             }
