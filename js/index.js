@@ -33,18 +33,21 @@ window.onload = function(){
     const turnTracker = document.querySelector('p');
     let turn = 1;
 
+    refresh();
+
     function addXO(){
-        if(this.textContent === '' && turn%2 !== 0 ){
+        if(turn%2 !== 0 ){
             this.textContent = 'X';
             turnTracker.textContent = `O's Turn`;
             turn++;
             win(xArr, this);
-        }else if(this.textContent === '' && turn%2 == 0){
+        }else if(turn%2 == 0){
             this.textContent = 'O';
             turnTracker.textContent = `X's Turn`;
             turn++;
             win(oArr, this);
         }
+        this.removeEventListener('click', addXO);
     }
 
     function endGame(){
@@ -60,7 +63,6 @@ window.onload = function(){
                 xScore++;
                 xScoreText.textContent = `X : ${xScore}`;
                 winText.textContent = "X WINS!";
-                popUp.style.display = "flex";
         }
         else if(oArr[0].row1 === 3 || 
             oArr[0].row2 === 3 ||
@@ -73,11 +75,11 @@ window.onload = function(){
                 oScore++;
                 oScoreText.textContent = `O : ${oScore}`;
                 winText.textContent = "O WINS!";
-                popUp.style.display = "flex";
         }else{
             winText.textContent = "TIE!";
-            popUp.style.display = "flex";
         }
+        popUp.style.display = "flex";
+        cells.forEach(cell => cell.removeEventListener('click', addXO));
     }
 
     function win(arr, cell){
@@ -171,10 +173,10 @@ window.onload = function(){
             dia1: 0,
             dia2: 0
         }];;
-
+        cells.forEach(cell => cell.addEventListener('click', addXO));
     }
 
-    cells.forEach(cell => cell.addEventListener('click', addXO));
+    
     playAgain.addEventListener('click', refresh);
 
 }
