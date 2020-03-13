@@ -4,11 +4,11 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  height: 70em;
+  height: 55em;
 }
 body h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 65px;
+  font-size: 60px;
   font-weight: bold;
   color: #2b4a4a;
   margin-bottom: -5px;
@@ -17,13 +17,13 @@ body h1 {
 body .turn-tracker > p {
   font-family: "Montserrat", sans-serif;
   color: #dae4e5;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
 }
 body .board-game {
-  height: 45em;
-  width: 45em;
+  height: 35em;
+  width: 35em;
   border: 10px solid #94c0c2;
   border-radius: 10px;
   display: grid;
@@ -33,7 +33,7 @@ body .board-game {
 body .board-game .cell {
   border: 10px solid #94c0c2;
   font-family: "Montserrat", sans-serif;
-  font-size: 7em;
+  font-size: 6em;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ body .board-game .cell {
   color: #dae4e5;
 }
 body .score {
-  width: 20em;
+  width: 15em;
   font-family: "Montserrat", sans-serif;
   color: #2b4a4a;
   font-size: 35px;
@@ -52,10 +52,10 @@ body .score {
 body .pop-up {
   position: absolute;
   margin-top: 5em;
-  height: 600px;
-  width: 400px;
+  height: 500px;
+  width: 300px;
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: bold;
   border: 5px solid #2b4a4a;
   border-radius: 10px;
@@ -78,8 +78,44 @@ body .pop-up button {
   border-radius: 5px;
   color: #2b4a4a;
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  body {
+    height: 30em;
+  }
+  body h1 {
+    font-size: 30px;
+  }
+  body .turn-tracker > p {
+    font-size: 20px;
+  }
+  body .board-game {
+    height: 20em;
+    width: 20em;
+    border: 5px solid #94c0c2;
+  }
+  body .board-game .cell {
+    border: 5px solid #94c0c2;
+    font-size: 3em;
+  }
+  body .score {
+    width: 12em;
+    font-size: 25px;
+  }
+  body .pop-up {
+    height: 400px;
+    width: 250px;
+    font-size: 30px;
+  }
+  body .pop-up .icon {
+    font-size: 100px;
+  }
+  body .pop-up button {
+    fons-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

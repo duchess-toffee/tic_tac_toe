@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1583815930661" clover="3.2.0">
+  <project timestamp="1583815930661" name="All files">
+    <metrics statements="33" coveredstatements="33" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11" elements="50" coveredelements="50" complexity="0" loc="33" ncloc="33" packages="1" files="1" classes="1"/>
+    <file name="problems.js" path="C:\Users\hannah\developer\kappa\tic_tac_toe\problems\problems.js">
+      <metrics statements="33" coveredstatements="33" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11"/>
+      <line num="43" count="6" type="stmt"/>
+      <line num="44" count="6" type="stmt"/>
+      <line num="48" count="9" type="stmt"/>
+      <line num="49" count="9" type="stmt"/>
+      <line num="50" count="9" type="stmt"/>
+      <line num="54" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="55" count="3" type="stmt"/>
+      <line num="56" count="3" type="stmt"/>
+      <line num="58" count="4" type="stmt"/>
+      <line num="62" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="63" count="3" type="stmt"/>
+      <line num="64" count="3" type="stmt"/>
+      <line num="66" count="4" type="stmt"/>
+      <line num="70" count="2" type="stmt"/>
+      <line num="71" count="2" type="stmt"/>
+      <line num="72" count="2" type="stmt"/>
+      <line num="73" count="2" type="stmt"/>
+      <line num="77" count="2" type="stmt"/>
+      <line num="78" count="2" type="stmt"/>
+      <line num="79" count="2" type="stmt"/>
+      <line num="80" count="2" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
+      <line num="86" count="2" type="stmt"/>
+      <line num="88" count="1" type="stmt"/>
+      <line num="93" count="3" type="stmt"/>
+      <line num="94" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="95" count="1" type="stmt"/>
+      <line num="98" count="3" type="stmt"/>
+      <line num="102" count="3" type="stmt"/>
+      <line num="103" count="3" type="stmt"/>
+      <line num="104" count="3" type="stmt"/>
+      <line num="107" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

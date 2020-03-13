@@ -89,32 +89,6 @@ class PhoneDirectory{
     }
 }
 
-const toffeeland = new PhoneDirectory();
-toffeeland.addEntry(`Hannah Ong`, `098-765-4321`);
-toffeeland.addEntry(`Jeremy Ong`, `234-567-8901`);
-toffeeland.addEntry(`Toffee Ong`, `123-456-7890`);
-
-console.log(toffeeland.lookupByName(`Toffee Ong`));
-console.log(toffeeland.lookupByNumber(`098-765-4321`));
-console.log(toffeeland.print());
-
-console.log(toffeeland.removeByName(`Toffee Ong`));
-console.log(toffeeland.removeByNumber(`098-765-4321`));
-console.log(toffeeland.lookupByName(`Toffee Ong`));
-console.log(toffeeland.lookupByNumber(`098-765-4321`));
-
-
-
-
-
-
-
-
-const arrA = [1, 2, 3, 4, 5]
-const arrB = [4, 5, 6, 7, 8]
-const setA = new Set(arrA);
-const setB = new Set(arrB);
-
 function uniqueElementsOfSetB(setA, setB){
     setA.forEach(value => {
         if (setB.has(value)){
@@ -124,19 +98,14 @@ function uniqueElementsOfSetB(setA, setB){
     return setB;
 }
 
-//console.log(uniqueElementsOfSetB(setA, setB))
-
-
 function joinTwoSets(setA, setB){
     const joinedArr = [...setA].concat([...setB]);
     const setC = new Set(joinedArr);
     return setC;
 }
 
-//console.log(joinTwoSets(setA, setB));
-
-//module.exports = {
-    //phoneDirectory,
-    //uniqueElementsOfSetB,
-    //joinTwoSets
-//}
+module.exports = {
+    PhoneDirectory,
+    uniqueElementsOfSetB,
+    joinTwoSets
+}

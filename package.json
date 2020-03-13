@@ -4,9 +4,9 @@
   "description": "Kappa M2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass:watch": "sass --watch css/style.sass css/style.css",
-    "test": "jest"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage"
   },
   "repository": {
     "type": "git",
